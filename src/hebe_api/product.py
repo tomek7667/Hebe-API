@@ -1,7 +1,8 @@
+from .entity import Entity
 from bs4.element import Tag
 
 
-class Product:
+class Product(Entity):
     def __init__(self, row: Tag):
         title = row.find("div", class_="product-package__title")
         if title is None:
@@ -29,12 +30,6 @@ class Product:
 
         [quantity] = row.find_all("div", class_="product-package__qty")
         self.quantity: int = int(quantity.text)
-
-    def _price_to_float(self, price: str) -> float:
-        return float(price.replace(",", ".").replace(" zł", "").strip())
-
-    def _remove_endlines(self, text: str) -> str:
-        return text.replace("\n", "").strip()
 
     def __repr__(self) -> str:
         return (

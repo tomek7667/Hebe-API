@@ -103,8 +103,8 @@ class Hebe:
             raise Exception(self.NO_TOKEN)
         return self._get_orders(start, max_orders)
 
-    def get_all_products(self) -> list[Product]:
-        orders = self.get_orders()
+    def get_all_products(self, max_orders: int = 100) -> list[Product]:
+        orders = self.get_orders(max_orders=max_orders)
         products: list[Product] = []
         for order in orders:
             products.extend(self.get_order_products(order))
