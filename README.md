@@ -1,5 +1,7 @@
 # Hebe API
 
+[![Test](https://github.com/tomek7667/Hebe-API/actions/workflows/test.yml/badge.svg?branch=master)](https://github.com/tomek7667/Hebe-API/actions/workflows/test.yml)
+
 Unofficial library for programmatic access to your Hebe account and your orders.
 
 ```
