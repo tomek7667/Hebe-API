@@ -1,0 +1,10 @@
+{
+    "python.analysis.typeCheckingMode": "strict",
+    "black-formatter.args": [
+        "--line-length",
+        "79",
+        // line break before binary operator
+        "--target-version",
+        "py38",
+    ]
+}

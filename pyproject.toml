@@ -58,6 +58,9 @@ classifiers = [
 # https://packaging.python.org/discussions/install-requires-vs-requirements/
 dependencies = [
   "beautifulsoup4",
+  "requests",
+  "json",
+  "urllib"
 ]
 
 # List additional groups of dependencies here (e.g. development
@@ -102,3 +105,6 @@ test = ["coverage"]
 # If there are data files included in your packages that need to be
 # installed, specify them here.
 # package-data = {"sample" = ["*.dat"]}
+
+[tool.black] 
+line-length = 79

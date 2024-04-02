@@ -4,17 +4,21 @@
 
 import unittest
 import os
+from dotenv import load_dotenv
+from src.hebe_api import Hebe
 
-from hebe_api import Hebe
-
-
+load_dotenv()
 EXAMPLE_HEBE_USERNAME = os.getenv("EXAMPLE_HEBE_USERNAME")
 EXAMPLE_HEBE_PASSWORD = os.getenv("EXAMPLE_HEBE_PASSWORD")
-print(EXAMPLE_HEBE_USERNAME)
+if EXAMPLE_HEBE_USERNAME is None or EXAMPLE_HEBE_PASSWORD is None:
+    raise Exception(
+        "Unit tests need valid hebe credentials " "to validate the project"
+    )
+
 
 class TestHebeAPI(unittest.TestCase):
     def test_authenticate(self):
-        hebe = Hebe()
+        hebe = Hebe(EXAMPLE_HEBE_USERNAME, EXAMPLE_HEBE_PASSWORD)
         hebe.authenticate()
 
 
