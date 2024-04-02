@@ -20,6 +20,7 @@ class TestHebeAPI(unittest.TestCase):
     def test_authenticate(self):
         hebe = Hebe(EXAMPLE_HEBE_USERNAME, EXAMPLE_HEBE_PASSWORD)
         hebe.authenticate()
+        self.assertIsInstance(hebe.token, str)
 
 
 if __name__ == '__main__':
