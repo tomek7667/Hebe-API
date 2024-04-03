@@ -3,11 +3,20 @@
 [![Test](https://github.com/tomek7667/Hebe-API-python/actions/workflows/test.yml/badge.svg?branch=master)](https://github.com/tomek7667/Hebe-API-python/actions/workflows/test.yml)
 Unofficial library for programmatic access to your Hebe account and your orders.
 
+Unofficial library for programmatic access to your Hebe account and your orders.
+
+JS/TS equivalent can be found at the [hebe-api npm package](https://www.npmjs.com/package/hebe-api)
+
+
+## ▶️ Use
+
+Install the package
+
 ```
 pip3 install hebe-api
 ```
 
-## Usage:
+## 📖 Getting Started
 
 ### Obtaining Hebe security token
 
