@@ -1,7 +1,6 @@
 # Hebe API
 
-[![Test](https://github.com/tomek7667/Hebe-API/actions/workflows/test.yml/badge.svg?branch=master)](https://github.com/tomek7667/Hebe-API/actions/workflows/test.yml)
-
+[![Test](https://github.com/tomek7667/Hebe-API-python/actions/workflows/test.yml/badge.svg?branch=master)](https://github.com/tomek7667/Hebe-API-python/actions/workflows/test.yml)
 Unofficial library for programmatic access to your Hebe account and your orders.
 
 ```
@@ -49,6 +48,7 @@ order.packs # int
 ```
 
 ### Obtaining products of particular order
+
 ```python
 # Default values are as follows:
 products = hebe.get_order_products(order)
@@ -65,6 +65,7 @@ product.quantity # int
 ```
 
 ### Obtaining all products
+
 ```python
 # Default values are as follows:
 all_products = hebe.get_all_products(max_orders=100)
@@ -72,11 +73,11 @@ all_products = hebe.get_all_products(max_orders=100)
 
 ## Roadmap
 
-- polish API supporting:
-  - [x] auth
-  - [x] get orders
-  - [x] get products
-- `.com` hebe API support
-  - [ ] auth
-  - [ ] get orders
-  - [ ] get products
+-   polish API supporting:
+    -   [x] auth
+    -   [x] get orders
+    -   [x] get products
+-   `.com` hebe API support
+    -   [ ] auth
+    -   [ ] get orders
+    -   [ ] get products
